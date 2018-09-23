@@ -1,0 +1,91 @@
+#version: "2"
+
+#services:
+
+#  nginx:
+#    image: nginx
+#    networks:
+#      - web
+#      - default
+#    container_name: "${PROJECT_NAME}_nginx"
+#    environment:
+#      NGINX_PAGESPEED: "on"
+##      NGINX_HOST: ${PROJECT_BASE_URL}
+#      NGINX_PORT: 80
+#      NGINX_BACKEND_HOST: php
+#      NGINX_SERVER_ROOT: /var/www/html/web
+#      NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
+#      NGINX_DRUPAL_FILE_PROXY_URL: http://example.com
+#    volumes:
+#      - ./web:/var/www/html/web
+# For macOS users (https://wodby.com/stacks/drupal/docs/local/docker-for-mac/)
+#      - ./:/var/www/html:cached # User-guided caching
+#      - docker-sync:/var/www/html # Docker-sync
+    #command: /bin/bash -c "envsubst < /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
+#    labels:
+#      - 'traefik.backend=nginx'
+#      - 'traefik.port=80'
+#      - 'traefik.enable=true'
+#      - 'traefik.default.protocol=http'
+#      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
+
+version: '2'
+
+services:
+  nginx:
+    image: nginx
+    networks:
+      - web
+      - default
+    container_name: "${PROJECT_NAME}_nginx"
+#    environment:
+#      NGINX_PAGESPEED: "on"
+##      NGINX_HOST: ${PROJECT_BASE_URL}
+#      NGINX_PORT: 80
+#      NGINX_BACKEND_HOST: php
+#      NGINX_SERVER_ROOT: /var/www/html/web
+#      NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
+#      NGINX_DRUPAL_FILE_PROXY_URL: http://example.com
+    volumes:
+      - ./web:/usr/share/nginx/html
+    labels:
+      - 'traefik.backend=nginx'
+      - 'traefik.port=80'
+      - "traefik.docker.network=web"
+      - 'traefik.enable=true'
+ #     - 'traefik.default.protocol=http'
+      - 'traefik.frontend.rule=Host:${PROJECT_BASE_URL}'
+
+  traefik:
+    image: traefik
+    restart: always
+    command: -c /dev/null --web --docker --logLevel=ERROR
+    ports:
+      - '80:80'
+      - '8080:8080'
+    networks:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+#      - ./traefik.toml:/traefik.toml
+#      - ./acme.json:/acme.json
+    container_name: traefik
+
+
+  portainer:
+    image: portainer/portainer
+    command: --no-auth -H unix:///var/run/docker.sock
+    networks:
+      - web
+      - default
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - 'traefik.backend=portainer'
+      - 'traefik.port=9000'
+      - 'traefik.frontend.rule=Host:portainer.localhost'
+      - "traefik.docker.network=web"
+
+networks:
+  web:
+    external: true
