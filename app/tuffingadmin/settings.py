@@ -25,7 +25,7 @@ SECRET_KEY = 'ko!#*f6dwqby6vgs!9v@d%pvi4u7iznz=tearz(t^=u$@n1pxi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tuffingadmin.localhost']
 
 
 # Application definition
@@ -80,10 +80,9 @@ DATABASES = {
         'USER': 'django',
         'PASSWORD': 'django',
         'HOST': 'db',
-        'PORT': 5432,
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
