@@ -9,6 +9,8 @@ services:
     container_name: "tufingadmin_nginx_uwsgi_django"
     volumes:
       - ./app:/home/docker/code/app/
+      - ./static:/home/docker/volatile/static
+      - ./media:/home/docker/persistent/media
     labels:
       - 'traefik.backend=nginx'
       - 'traefik.port=80'
