@@ -25,6 +25,8 @@ services:
      POSTGRES_PASSWORD: django
      POSTGRES_DB: django
      POSTGRES_USER: django
+   ports:
+     - '5432:5432'
    volumes:
      - ./database/initdb:/docker-entrypoint-initdb.d # Place init file(s) here.
      - ./database/pgdata:/var/lib/postgresql/data # I want to manage volumes manually.
