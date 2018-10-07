@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig'
+    'blog',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -103,6 +104,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+REST_FRAMEWORK = {
+    # When you enable API versioning, the request.version attribute will contain a string
+    # that corresponds to the version requested in the incoming client request.
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
