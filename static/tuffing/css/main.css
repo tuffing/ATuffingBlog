@@ -45,5 +45,22 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: "marker_twinsregular";
+  src: url("../fonts/twinmarker-webfont.woff2") format("woff2"), url("../fonts/twinmarker-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+#Masthead {
+  display: flex;
+  background-color: #fffff9;
+  background-image: url("../images/paper-line.png");
+  height: 80px; }
+  #Masthead .logo {
+    font-family: "marker_twinsregular";
+    font-size: 36px;
+    font-size: 2.25rem;
+    text-decoration: none;
+    margin: 20px; }
+
 body {
   color: #222; }
