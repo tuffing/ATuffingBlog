@@ -1,13 +1,94 @@
 #Masthead {
 	display: flex;
-	background-color: $background-trim;
+	background-color: $foreground-main;
 	background-image: url("../images/paper-line.png");
 	height: 80px;
+	overflow: hidden;
 
 	.logo {
+		color: $header-font-color;
 		font-family: $header-font-family;
 		@include font-size(36px);
 		text-decoration: none;
-    	margin: 20px;
+		margin: 20px;
+		display: flex;
+
+		img {
+			padding: 10px 20px;
+			margin-top: -20px;
+		}
 	}
+
+	.logo:active,
+	.logo:focus,
+	.logo:hover {
+		color: $color-secondary-2-3;
+	}
+
+	.social-media {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		margin-right: 10px;
+		z-index: 2;
+
+		a {
+			margin: 0 5px 0 5px;
+		}
+		a:active,
+		a:focus,
+		a:hover {
+			filter: invert(80%);
+		}
+	}
+
+}
+
+#CodeDecoration {
+	font-family: $header-font-family;
+	color: $code-color-normal;
+	@include font-size(33px);
+	opacity: .2;
+	position: absolute;
+	height: 80px;
+	right: 30px;
+	overflow: hidden;
+	z-index: 1;
+
+	pre {
+		transform: rotate(8deg);
+	}
+
+	.prime {
+		color: $code-color-prime;
+	}
+
+	.function-name {
+		color: $code-color-function-name;
+		font-weight: bold;
+	}
+
+	.string {
+		color: $code-color-string;
+	}
+
+	.parameter {
+		color: $code-color-parameter;
+	}
+
+	.loop {
+		color: $code-color-loop;
+	}
+
+	.number {
+		color: $code-color-number;
+	}
+}
+
+.trim {
+	color: $header-font-trim;
+}
+.trim:active,
+.trim:hover {
+	opacity: .3;
 }

@@ -1,2 +1,41 @@
-$primary-color: #222;
-$background-trim: #fffff9;
+
+//http://paletton.com/#uid=31T0u0k0Lw000++07N+1+qP4gmo
+$color-primary-0: #FFFFF9;	// Main Primary color */
+$color-primary-1: #FFFFFF;
+$color-primary-2: #FFFFFE;
+$color-primary-3: #D6D6C8;
+$color-primary-4: #B2B29B;
+
+$color-secondary-1-0: #CDC8CA;	// Main Secondary color (1) */
+$color-secondary-1-1: #FFFFFF;
+$color-secondary-1-2: #EAEAEA;
+$color-secondary-1-3: #ABA1A7;
+$color-secondary-1-4: #8F7C87;
+
+$color-secondary-2-0: #ADACAF;	// Main Secondary color (2) */
+$color-secondary-2-1: #FFFFFF;
+$color-secondary-2-2: #DEDEDF;
+$color-secondary-2-3: #8D8B93;
+$color-secondary-2-4: #706C7B;
+
+
+
+//body
+$primary-body-text: #222;
+
+//background
+$foreground-main: $color-primary-0;
+$background-main: $color-primary-4;
+
+//header
+$header-font-color: $color-secondary-2-4;
+$header-font-trim: #ee0000;
+
+//code decoration in the header,
+$code-color-normal: #888;
+$code-color-prime: $color-secondary-2-4;
+$code-color-function-name: $color-secondary-1-4;
+$code-color-string: $color-primary-3;
+$code-color-parameter: $color-secondary-2-3;
+$code-color-loop: $color-secondary-1-3;
+$code-color-number: $color-secondary-1-2;
