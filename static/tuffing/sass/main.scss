@@ -4,6 +4,8 @@
 
 // Partials
 @import "partials/header";
+@import "partials/body";
+@import "partials/article";
 
 body {
   background-color: $background-main;

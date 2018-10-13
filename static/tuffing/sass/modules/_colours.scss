@@ -20,9 +20,6 @@ $color-secondary-2-4: #706C7B;
 
 
 
-//body
-$primary-body-text: #222;
-
 //background
 $foreground-main: $color-primary-0;
 $background-main: $color-primary-4;
@@ -30,6 +27,10 @@ $background-main: $color-primary-4;
 //header
 $header-font-color: $color-secondary-2-4;
 $header-font-trim: #ee0000;
+
+//body
+$primary-body-text: #444;
+$primary-body-links: $header-font-trim;
 
 //code decoration in the header,
 $code-color-normal: #888;
