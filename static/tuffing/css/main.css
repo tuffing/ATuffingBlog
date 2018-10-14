@@ -55,7 +55,8 @@ table {
   background-color: #FFFFF9;
   background-image: url("../images/paper-line.png");
   height: 80px;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 2px 2px 6px 0px rgba(125, 121, 125, 0.71); }
   #Masthead .logo {
     color: #706C7B;
     font-family: "marker_twinsregular";
@@ -134,6 +135,7 @@ table {
 
 .article-post {
   background-color: #FFFFF9;
+  box-shadow: 2px 2px 6px 0px rgba(125, 121, 125, 0.71);
   padding: 10px;
   margin-top: 25px;
   color: #444; }
@@ -178,15 +180,49 @@ table {
       font-family: "marker_twinsregular"; }
   .article-post .share-post {
     display: flex;
-    margin-top: 50px; }
+    margin-top: 50px;
+    align-items: center; }
     .article-post .share-post h3 {
       margin-left: auto; }
-    .article-post .share-post ul li {
-      display: inline;
-      border-radius: 4px;
-      border: 1px solid #ee0000;
-      margin: 3px;
-      padding: 3px; }
+
+#Sidebar {
+  margin-top: 25px; }
+  #Sidebar section:first-child {
+    margin-top: 0; }
+  #Sidebar section {
+    background-color: #FFFFF9;
+    box-shadow: 2px 2px 6px 0px rgba(125, 121, 125, 0.71);
+    color: #444;
+    padding: 10px;
+    margin-top: 15px;
+    line-height: 1.5; }
+    #Sidebar section h1 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      font-family: "marker_twinsregular";
+      padding: 10px;
+      background-color: #D6D6C8;
+      margin: -10px;
+      margin-bottom: 0;
+      line-height: 1; }
+    #Sidebar section a {
+      color: #ee0000;
+      text-decoration: none; }
+    #Sidebar section a:active,
+    #Sidebar section a:focus,
+    #Sidebar section a:hover {
+      text-decoration: underline; }
+  #Sidebar .content {
+    padding-top: 15px;
+    justify-content: space-around;
+    display: flex; }
+  #Sidebar .recent-articles ul {
+    padding-top: 5px; }
+    #Sidebar .recent-articles ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f3f3f3; }
+    #Sidebar .recent-articles ul li:last-child {
+      border: 0; }
 
 #Keel {
   display: flex;
@@ -195,7 +231,8 @@ table {
   height: 80px;
   overflow: hidden;
   color: #444;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  box-shadow: 2px 2px 6px 0px rgba(125, 121, 125, 0.71); }
   #Keel .keel-wrapper {
     flex-basis: 1100px;
     display: flex;
@@ -221,6 +258,17 @@ table {
     #Keel .keel-wrapper a:focus,
     #Keel .keel-wrapper a:hover {
       text-decoration: underline; }
+
+.pill {
+  border-radius: 4px;
+  border: 1px solid #ee0000;
+  margin: 3px;
+  padding: 3px;
+  display: inline;
+  line-height: 2; }
+
+.pill-emphasis {
+  font-weight: bold; }
 
 body {
   background-color: #B2B29B;

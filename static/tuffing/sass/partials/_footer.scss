@@ -6,6 +6,7 @@
 	overflow: hidden;
 	color: $primary-body-text;
     font-family: 'Raleway', sans-serif;
+    box-shadow: 2px 2px 6px 0px rgba(125,121,125,0.71);
 
     .keel-wrapper {
 	    flex-basis: $max-body-width;
@@ -19,7 +20,7 @@
 			align-items: center;
 			text-align: right;
 			font-weight: bold;
-			
+
 
 			a {
 				padding-right: 15px;

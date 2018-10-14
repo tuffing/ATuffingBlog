@@ -4,7 +4,8 @@
 	background-image: $header-background-image;
 	height: 80px;
 	overflow: hidden;
-
+	box-shadow: 2px 2px 6px 0px rgba(125,121,125,0.71);
+	
 	.logo {
 		color: $header-font-color;
 		font-family: $header-font-family;
