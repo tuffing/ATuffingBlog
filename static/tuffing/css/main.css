@@ -135,6 +135,7 @@ table {
 .article-post {
   background-color: #FFFFF9;
   padding: 10px;
+  margin-top: 25px;
   color: #444; }
   .article-post a {
     color: #ee0000;
@@ -186,6 +187,40 @@ table {
       border: 1px solid #ee0000;
       margin: 3px;
       padding: 3px; }
+
+#Keel {
+  display: flex;
+  background-color: #FFFFF9;
+  background-image: url("../images/paper-line.png");
+  height: 80px;
+  overflow: hidden;
+  color: #444;
+  font-family: 'Raleway', sans-serif; }
+  #Keel .keel-wrapper {
+    flex-basis: 1100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; }
+    #Keel .keel-wrapper .copyright,
+    #Keel .keel-wrapper nav {
+      display: flex;
+      align-items: center;
+      text-align: right;
+      font-weight: bold; }
+      #Keel .keel-wrapper .copyright a,
+      #Keel .keel-wrapper nav a {
+        padding-right: 15px; }
+    #Keel .keel-wrapper nav li {
+      display: inline;
+      margin: 3px;
+      padding: 3px; }
+    #Keel .keel-wrapper a {
+      color: #ee0000;
+      text-decoration: none; }
+    #Keel .keel-wrapper a:active,
+    #Keel .keel-wrapper a:focus,
+    #Keel .keel-wrapper a:hover {
+      text-decoration: underline; }
 
 body {
   background-color: #B2B29B;

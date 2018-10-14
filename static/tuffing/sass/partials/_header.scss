@@ -1,7 +1,7 @@
 #Masthead {
 	display: flex;
 	background-color: $foreground-main;
-	background-image: url("../images/paper-line.png");
+	background-image: $header-background-image;
 	height: 80px;
 	overflow: hidden;
 
