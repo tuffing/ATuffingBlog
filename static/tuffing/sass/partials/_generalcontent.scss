@@ -6,6 +6,10 @@
 
 	p {
 		@include font-size(21px);
+		
+		@include mq('tablet', 'max') {
+			@include font-size(16px);
+		}
 	}
 
 	strong {
@@ -19,10 +23,18 @@
 
 	h2 {
 		@include font-size(36px);
+
+		@include mq('tablet', 'max') {
+			@include font-size(30px);
+		}
 	}
 
 	h3 {
 		@include font-size(30px);
+
+		@include mq('tablet', 'max') {
+			@include font-size(24px);
+		}
 	}
 
 	h4,h5 {
@@ -67,8 +79,19 @@
 			top: -14px;
 			@include font-size(30px);
 			font-weight: bold;
+
+			@include mq('tablet', 'max') {
+				@include font-size(24px);
+				top: -8px;
+			}
+
 		}
 
 	}
 
+	li {
+		@include mq('tablet', 'max') {
+			@include font-size(16px);
+		}
+	}
 }

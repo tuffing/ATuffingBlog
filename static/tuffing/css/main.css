@@ -58,6 +58,9 @@ table {
   height: 80px;
   overflow: hidden;
   box-shadow: 2px 2px 6px 0px rgba(125, 121, 125, 0.71); }
+  @media only screen and (max-width: 479px) {
+    #Masthead {
+      height: 60px; } }
   #Masthead .logo {
     color: #706C7B;
     font-family: "marker_twinsregular";
@@ -69,6 +72,24 @@ table {
     #Masthead .logo img {
       padding: 10px 20px;
       margin-top: -20px; }
+    @media only screen and (max-width: 559px) {
+      #Masthead .logo {
+        font-size: 30px;
+        font-size: 1.875rem; } }
+    @media only screen and (max-width: 479px) {
+      #Masthead .logo {
+        margin: 13px;
+        font-size: 28px;
+        font-size: 1.75rem; }
+        #Masthead .logo img {
+          width: 15px;
+          height: 30px;
+          margin-top: -10px; } }
+    @media only screen and (max-width: 399px) {
+      #Masthead .logo {
+        margin: 14px;
+        font-size: 24px;
+        font-size: 1.5rem; } }
   #Masthead .logo:active,
   #Masthead .logo:focus,
   #Masthead .logo:hover {
@@ -85,6 +106,22 @@ table {
     #Masthead .social-media a:focus,
     #Masthead .social-media a:hover {
       filter: invert(80%); }
+    @media only screen and (max-width: 767px) {
+      #Masthead .social-media {
+        margin-right: 5px; }
+        #Masthead .social-media img {
+          width: 35px;
+          height: 35px; } }
+    @media only screen and (max-width: 559px) {
+      #Masthead .social-media {
+        margin-right: 3px; }
+        #Masthead .social-media img {
+          width: 30px;
+          height: 30px; } }
+    @media only screen and (max-width: 399px) {
+      #Masthead .social-media img {
+        width: 25px;
+        height: 25px; } }
 
 #CodeDecoration {
   font-family: "marker_twinsregular";
@@ -112,6 +149,12 @@ table {
     color: #ABA1A7; }
   #CodeDecoration .number {
     color: #EAEAEA; }
+  @media only screen and (max-width: 767px) {
+    #CodeDecoration {
+      opacity: .1; } }
+  @media only screen and (max-width: 559px) {
+    #CodeDecoration {
+      display: none; } }
 
 .trim {
   color: #ee0000; }
@@ -130,9 +173,22 @@ table {
     margin-right: auto;
     padding-right: 20px;
     flex-basis: 900px; }
+    @media only screen and (max-width: 767px) {
+      .body-wrapper .left-col {
+        padding-left: 10px;
+        padding-right: 10px; } }
   .body-wrapper .right-col {
     margin-left: auto;
     flex-basis: 250px; }
+    @media only screen and (max-width: 767px) {
+      .body-wrapper .right-col {
+        margin-left: 0;
+        padding-left: 10px;
+        padding-right: 10px; } }
+  @media only screen and (max-width: 767px) {
+    .body-wrapper {
+      flex-direction: column;
+      margin: 0 auto; } }
 
 .article-post {
   background-color: #FFFFF9;
@@ -160,6 +216,10 @@ table {
       font-size: 52px;
       font-size: 3.25rem;
       padding-bottom: 5px; }
+      @media only screen and (max-width: 767px) {
+        .article-post .title h1 {
+          font-size: 36px;
+          font-size: 2.25rem; } }
   .article-post .title:active,
   .article-post .title:focus,
   .article-post .title:hover {
@@ -169,12 +229,21 @@ table {
     font-weight: bold;
     padding: 10px;
     margin: 5px -10px; }
+    @media only screen and (max-width: 767px) {
+      .article-post .by-line {
+        font-size: 16px;
+        font-size: 1rem;
+        padding: 8px 10px; } }
   .article-post .comments {
     margin-top: 10px; }
     .article-post .comments h2 {
       font-size: 32px;
       font-size: 2rem;
       font-family: "marker_twinsregular"; }
+      @media only screen and (max-width: 767px) {
+        .article-post .comments h2 {
+          font-size: 24px;
+          font-size: 1.5rem; } }
   .article-post .share-post {
     display: flex;
     margin-top: 50px;
@@ -188,6 +257,10 @@ table {
 .content p {
   font-size: 21px;
   font-size: 1.3125rem; }
+  @media only screen and (max-width: 767px) {
+    .content p {
+      font-size: 16px;
+      font-size: 1rem; } }
 .content strong {
   font-weight: 600; }
 .content em {
@@ -195,9 +268,17 @@ table {
 .content h2 {
   font-size: 36px;
   font-size: 2.25rem; }
+  @media only screen and (max-width: 767px) {
+    .content h2 {
+      font-size: 30px;
+      font-size: 1.875rem; } }
 .content h3 {
   font-size: 30px;
   font-size: 1.875rem; }
+  @media only screen and (max-width: 767px) {
+    .content h3 {
+      font-size: 24px;
+      font-size: 1.5rem; } }
 .content h4, .content h5 {
   font-weight: 600; }
 .content ul {
@@ -231,6 +312,15 @@ table {
     font-size: 30px;
     font-size: 1.875rem;
     font-weight: bold; }
+    @media only screen and (max-width: 767px) {
+      .content ol li:before {
+        font-size: 24px;
+        font-size: 1.5rem;
+        top: -8px; } }
+@media only screen and (max-width: 767px) {
+  .content li {
+    font-size: 16px;
+    font-size: 1rem; } }
 
 #Sidebar {
   margin-top: 25px; }

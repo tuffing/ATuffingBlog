@@ -5,7 +5,11 @@
 	height: 80px;
 	overflow: hidden;
 	box-shadow: 2px 2px 6px 0px rgba(125,121,125,0.71);
-	
+
+	@include mq('phone-wide', 'max') {
+		height: 60px;
+	}
+
 	.logo {
 		color: $header-font-color;
 		font-family: $header-font-family;
@@ -17,6 +21,25 @@
 		img {
 			padding: 10px 20px;
 			margin-top: -20px;
+		}
+
+		@include mq('phablet', 'max') {
+			@include font-size(30px);	
+		}
+		@include mq('phone-wide', 'max') {
+			margin: 13px;
+			@include font-size(28px);
+
+			img {
+				width: 15px;
+				height: 30px;
+				margin-top: -10px;
+			}
+		}
+
+		@include mq('phone', 'max') {
+			margin: 14px;
+			@include font-size(24px);
 		}
 	}
 
@@ -41,6 +64,29 @@
 		a:hover {
 			filter: invert(80%);
 		}
+
+		@include mq('tablet', 'max') {
+			margin-right: 5px;
+
+			img {
+				width: 35px;
+				height: 35px;
+			}
+		}
+		@include mq('phablet', 'max') {
+			margin-right: 3px;
+			img {
+				width: 30px;
+				height: 30px;
+			}	
+		}
+		@include mq('phone', 'max') {
+			img {
+				width: 25px;
+				height: 25px;
+			}
+		}
+
 	}
 
 }
@@ -83,6 +129,13 @@
 
 	.number {
 		color: $code-color-number;
+	}
+
+	@include mq('tablet', 'max') {
+		opacity: .1;
+	}
+	@include mq('phablet', 'max') {
+		display:none;
 	}
 }
 
