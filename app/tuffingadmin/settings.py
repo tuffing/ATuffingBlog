@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'rest_framework'
+    'rest_framework',
+    'ckeditor',
+    'ckeditor_uploader'
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,21 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/docker/volatile/static'
 MEDIA_ROOT = '/home/docker/persistent/media'
+MEDIA_URL = '/media/'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['Format'],
+            ['NumberedList', 'BulletedList', 'Table', 'Blockquote'],
+            ['Link', 'Unlink', 'Anchor', 'Image'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}

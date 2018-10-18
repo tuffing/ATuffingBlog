@@ -1,0 +1,19 @@
+// Modules and Variables
+@import "partials/base";
+
+
+// Partials
+@import "partials/header";
+@import "partials/body";
+@import "partials/article";
+@import "partials/generalcontent";
+@import "partials/sidebar";
+@import "partials/footer";
+
+
+@import "partials/pill";
+
+body {
+  background-color: $background-main;
+  color: $primary-body-text;
+}

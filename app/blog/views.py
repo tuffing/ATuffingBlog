@@ -18,6 +18,8 @@ def page(request, article_id):
     article = get_object_or_404(Article, pk=article_id)
     return render(request, 'blog/page.html', {'article': article})
 
+
+# @TODO move over into actual api module
 class ListArticleView(generics.ListAPIView):
     """
     Provides a get method handler to fetch an article.

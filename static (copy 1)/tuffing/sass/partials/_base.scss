@@ -1,0 +1,29 @@
+@import "vendor/reset";
+
+$header-background-image: url("../images/paper-line.png");
+
+//widths
+$max-body-width: 1100px;
+
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 13px;
+$base-line-height: 1.4;
+
+
+// header font
+$header-font-family: 'marker_twinsregular';
+
+// Headings
+$header-font-weight: $bold;
+
+@import "modules/all";
+
+@include font-face('marker_twinsregular', '../fonts/twinmarker-webfont');
