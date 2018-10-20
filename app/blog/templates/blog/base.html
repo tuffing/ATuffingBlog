@@ -1,21 +1,56 @@
 {% load static %}
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>A blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">A Blog</a></h1>
+<head>
+    <title>A Tuffing blog</title>
+
+    <link rel="stylesheet" href="/static/tuffing/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
+
+    <header id="Masthead">
+        <a class="logo" href=""><img src="/static/tuffing/images/mr-man.png" height="60" alt="Tuffing logo" /> A Tuffing <span class="trim">Blog</span></a>
+
+
+        <div class="social-media">
+            <a href="/"><img src="/static/tuffing/images/social-media/github.png" height="50" width="50" alt="View Logans Github account" /></a>
+            <a href="/"><img src="/static/tuffing/images/social-media/linkedin.png" height="50" width="50" alt="View Logans Linkedin page" /></a>
+            <a href="/"><img src="/static/tuffing/images/social-media/twitter.png" height="50" width="50" alt="View Tuffing Blogs twitter feed" /></a>
         </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
+
+        <div id="CodeDecoration">
+<pre>
+    <span class="prime">var</span> <span class="function-name">helloBlog</span> = <span class="prime">function</span>(<span class="parameter">blogName</span> = <span class="string">'Tuffings Blog'</span>, <span class="parameter">repeatX</span> = <span class="number">1000</span>) {
+        <span class="loop">for</span> (var i =  <span class="number">0</span>; i < repeatX; i++) {
+            str = str + i;
+            <span class="prime">console.log</span>('Hello from ' + blogName);
+        }
+    }
+</pre>
+        </div>
+    </header>
+
+
+    <div class="body-wrapper">  
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer id="Keel">
+        <div class="keel-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Archive</a></li>
+                </ul>
+            </nav>
+
+            <div class="copyright">
+                <a href="/">A Tuffing Blog</a> All rights reserved.
             </div>
         </div>
-    </body>
+    </footer>
+
+</body>
 </html>

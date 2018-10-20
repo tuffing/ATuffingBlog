@@ -1,7 +1,41 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-	<h1>{{ article.headline }}</h1>
-	<div>
-		{{ article.body }}
-	</div>
+<div class="left-col">
+	<article class="article-post">
+		<header>
+			<a class="title" href="/">
+				<div class="image">
+					<img src="https://via.placeholder.com/935x200" alt="Title of article"></img>
+				</div>
+				<h1>{{ article.headline }}</h1>
+			</a>
+			<div class="by-line">
+				Written By
+				<a href="/" class="author">{{ article.author }}</a>
+				on
+				<span class="date">{{ article.pub_date }}</span> 
+			</div>
+		</header>
+
+		<div class="content">
+			{{ article.body }}
+		</div>
+
+		<div class="share-post">
+
+				<h3>Share:</h3> 
+				<ul>
+					<li class="pill"><a href"/">Facebook</a></li>
+					<li class="pill"><a href"/">Twitter</a></li>
+					<li class="pill"><a href"/">LinkedIn</a></li>
+				</ul>
+
+		</div>
+
+		<div class="comments">
+			<h2>Leave a comment</h2>
+			<p>@TODO some mechanism for this</p>
+		</div>
+	</article>
+</div>
 {% endblock %}
