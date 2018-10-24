@@ -10,7 +10,7 @@
 <body>
 
     <header id="Masthead">
-        <a class="logo" href=""><img src="/static/tuffing/images/mr-man.png" height="60" alt="Tuffing logo" /> A Tuffing <span class="trim">Blog</span></a>
+        <a class="logo" href="/"><img src="/static/tuffing/images/mr-man.png" height="60" alt="Tuffing logo" /> A Tuffing <span class="trim">Blog</span></a>
 
 
         <div class="social-media">
@@ -34,6 +34,43 @@
 
     <div class="body-wrapper">  
         {% block content %}
+        {% endblock %}
+
+        {% block sidebar %}
+            <div class="right-col">
+                <div id="Sidebar">
+                    <section class="share-post">
+                        <h1>Follow A Tuffing Blog</h1>
+                        <div class="content">
+                            <a href="/"><img src="/static/tuffing/images/social-media/github.png" height="40" width="40" alt="View Logans Github account" /></a>
+                            <a href="/"><img src="/static/tuffing/images/social-media/linkedin.png" height="40" width="40" alt="View Logans Linkedin page" /></a>
+                            <a href="/"><img src="/static/tuffing/images/social-media/twitter.png" height="40" width="40" alt="View Tuffing Blogs twitter feed" /></a>
+                        </div>
+                    </section>
+
+                    <section class="recent-articles">
+                        <h1>Recent Articles</h1>
+                        <ul>
+                            {% for article in latest_articles %}
+                                <li><a href="{% url 'blog:article' article.machine_name %}">{{article.headline}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+
+                    <section class="archive-tags">
+                        <h1>View Archive</h1>
+                        
+                        <ul>
+                            <li class="pill pill-emphasis"><a href="/">All</a></li>
+                            <li class="pill"><a href="/">CSS</a></li>
+                            <li class="pill"><a href="/">Docker</a></li>
+                            <li class="pill"><a href="/">Django</a></li>
+                            <li class="pill"><a href="/">Algorithms</a></li>
+                        </ul>
+
+                    </section>
+                </div>
+            </div>
         {% endblock %}
     </div>
 

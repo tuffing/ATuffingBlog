@@ -9,14 +9,20 @@ from .serializers import ArticleSerializer
 from .models import Article
 
 def index(request):
-    latest_articles = Article.objects.order_by('-pub_date')[:5]
+    latest = Article.objects.order_by('-pub_date')[:1].get()
+    latest_articles = sidebar()
     
-    context = { 'latest_articles': latest_articles}
+    context = { 'latest': latest, 'latest_articles': latest_articles}
     return render(request, 'blog/index.html', context)
 
-def page(request, article_id):
-    article = get_object_or_404(Article, pk=article_id)
-    return render(request, 'blog/page.html', {'article': article})
+def page(request, article_machine_name):
+    article = get_object_or_404(Article, machine_name=article_machine_name)
+    return render(request, 'blog/article.html', {'article': article})
+
+def sidebar():
+    latest_articles = Article.objects.order_by('-pub_date')[:10]
+
+    return latest_articles
 
 
 # @TODO move over into actual api module
