@@ -19,7 +19,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     #path('blog/', include('blog.urls')),
-    path('', include('blog.urls')),
     path('admin/', admin.site.urls),
+    path('', include('blog.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls'))
 ]

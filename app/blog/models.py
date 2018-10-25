@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
+from tagulous.models import TagField
 
 class Article(models.Model):
     
@@ -9,6 +10,7 @@ class Article(models.Model):
     body = RichTextUploadingField()
     pub_date = models.DateTimeField('date published')
     header_image  = models.FileField(upload_to='banners/%Y/%m/%d/', null=True)
+    tags = TagField()
 
 
     def __str__(self):

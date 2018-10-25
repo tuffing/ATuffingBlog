@@ -4,23 +4,23 @@
 <div class="left-col">
 	<article class="article-post">
 		<header>
-			<a class="title" href="{% url 'blog:article' latest.machine_name %}">
+			<a class="title" href="{% url 'blog:article' article.machine_name %}">
 				<div class="image">
 					{% load static %}
-					<img src="{{ latest.header_image.url }}" alt="{{ latest.headline }}}"></img>
+					<img src="{{ article.header_image.url }}" alt="{{ article.headline }}}"></img>
 				</div>
-				<h1>{{ latest.headline }}</h1>
+				<h1>{{ article.headline }}</h1>
 			</a>
 			<div class="by-line">
 				Written By
-				<a href="/" class="author">{{ latest.author }}</a>
+				<a href="/" class="author">{{ article.author }}</a>
 				on
-				<span class="date">{{ latest.pub_date }}</span> 
+				<span class="date">{{ article.pub_date }}</span> 
 			</div>
 		</header>
 
 		<div class="content">
-			{{ latest.body | safe }}
+			{{ article.body | safe }}
 		</div>
 
 		<div class="share-post">
@@ -34,10 +34,10 @@
 
 		</div>
 
-		<div class="comments">
+		<!--div class="comments">
 			<h2>Leave a comment</h2>
 			<p>@TODO some mechanism for this</p>
-		</div>
+		</div-->
 	</article>
 </div>
 
