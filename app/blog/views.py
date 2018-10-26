@@ -10,21 +10,35 @@ from .models import Article
 
 def index(request):
     latest = Article.objects.order_by('-pub_date')[:1].get()
-    latest_articles = sidebar()
-    
-    context = { 'article': latest, 'latest_articles': latest_articles}
+    context = getSidebarVariables()
+    context['article'] = latest
+
     return render(request, 'blog/index.html', context)
 
 def article(request, article_machine_name):
     article = get_object_or_404(Article, machine_name=article_machine_name)
-    latest_articles = sidebar()
+    context = getSidebarVariables()
+    context['article'] = article
 
-    return render(request, 'blog/index.html', {'article': article, 'latest_articles': latest_articles})
+    return render(request, 'blog/index.html', context)
 
-def sidebar():
+def archive(request, tag):
+    archive_list = []
+    if tag.lower() == 'all':
+        archive_list = Article.objects.order_by('-pub_date')[:10].get()
+    else:
+        archive_list = Article.objects.filter(tags=tag)
+
+    context = getSidebarVariables()
+    context['archive_list'] = archive_list
+
+    return render(request, 'blog/archive.html', context)
+
+def getSidebarVariables():
     latest_articles = Article.objects.order_by('-pub_date')[:10]
+    tags = Article.tags.tag_model.objects.all()
 
-    return latest_articles
+    return {'latest_articles': latest_articles, 'tags': tags}
 
 
 # @TODO move over into actual api module

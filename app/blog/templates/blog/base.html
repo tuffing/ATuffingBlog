@@ -58,14 +58,13 @@
                     </section>
 
                     <section class="archive-tags">
-                        <h1>View Archive</h1>
-                        
+                        <h1>Archive</h1>
+
                         <ul>
-                            <li class="pill pill-emphasis"><a href="/">All</a></li>
-                            <li class="pill"><a href="/">CSS</a></li>
-                            <li class="pill"><a href="/">Docker</a></li>
-                            <li class="pill"><a href="/">Django</a></li>
-                            <li class="pill"><a href="/">Algorithms</a></li>
+                            <li class="pill pill-emphasis"><a href="{% url 'blog:archive' 'all' %}">All</a></li>
+                            {% for tag in tags %}
+                                <li class="pill"><a href="{% url 'blog:archive' tag.name %}">{{tag.name}}</a></li>
+                            {% endfor %}
                         </ul>
 
                     </section>

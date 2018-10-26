@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, article,ListArticleView
+from .views import index, article,archive,ListArticleView
 
 #from . import views
 
@@ -8,6 +8,7 @@ urlpatterns = [
     path('', index, name='index'),
     # ex: /blog/5/
     path('<article_machine_name>/', article, name='article'),
+    path('archive/<tag>/', archive, name='archive'),
     #path('blog/', ListArticleView.as_view(), name="articles-all")
 ]
 
