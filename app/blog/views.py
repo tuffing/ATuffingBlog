@@ -8,10 +8,13 @@ from .serializers import ArticleSerializer
 
 from .models import Article
 
+site_name = 'A Tuffing Blog'
+
 def index(request):
     latest = Article.objects.order_by('-pub_date')[:1].get()
     context = getSidebarVariables()
     context['article'] = latest
+    context['title'] = site_name + ' - Homepage'
 
     return render(request, 'blog/index.html', context)
 
@@ -19,6 +22,7 @@ def article(request, article_machine_name):
     article = get_object_or_404(Article, machine_name=article_machine_name)
     context = getSidebarVariables()
     context['article'] = article
+    context['title'] = article.headline + ' - ' + site_name 
 
     return render(request, 'blog/index.html', context)
 
@@ -31,6 +35,7 @@ def archive(request, tag):
 
     context = getSidebarVariables()
     context['archive_list'] = archive_list
+    context['title'] = tag + ' - ' + site_name 
 
     return render(request, 'blog/archive.html', context)
 
