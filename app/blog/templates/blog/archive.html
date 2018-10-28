@@ -2,34 +2,32 @@
 {% block content %}
 
 <div class="left-col">
-	{% for article in archive_list %}
-		<article class="article-post">
-			<header>
-				<a class="title" href="{% url 'blog:article' article.machine_name %}">
-					<div class="image">
-						{% load static %}
-						<img src="{{ article.header_image.url }}" alt="{{ article.headline }}}"></img>
-					</div>
-					<h1>{{ article.headline }}</h1>
-				</a>
-				<div class="by-line">
-					Written By
-					<a href="/" class="author">{{ article.author }}</a>
-					on
-					<span class="date">{{ article.pub_date }}</span> 
+	<div class="archive-wrapper">
+		{% for article in archive_list %}
+			<article class="archive-block">
+				<header>
+					<a class="title" href="{% url 'blog:article' article.machine_name %}">
+						<div class="image">
+							{% load static %}
+							<img src="{{ article.header_image_small.url }}" alt="{{ article.headline }}}"></img>
+						</div>
+						<h1>{{ article.headline }}</h1>
+					</a>
+				</header>
+
+				<div class="content">
+					{{ article.teaser | safe }}
 				</div>
-			</header>
 
-			<div class="content">
-				@TODO
-			</div>
-
-			<!--div class="comments">
-				<h2>Leave a comment</h2>
-				<p>@TODO some mechanism for this</p>
-			</div-->
-		</article>
-	{% endfor %}
+				<footer>
+					<div class="by-line">
+						<a href="/" class="author">{{ article.author }}</a>
+						<span class="date">{{ article.pub_date }}</span> 
+					</div>
+				</footer>
+			</article>
+		{% endfor %}
+	</div>
 </div>
 
 

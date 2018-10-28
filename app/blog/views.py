@@ -16,7 +16,7 @@ def index(request):
     context['article'] = latest
     context['title'] = site_name + ' - Homepage'
 
-    return render(request, 'blog/index.html', context)
+    return render(request, 'blog/article.html', context)
 
 def article(request, article_machine_name):
     article = get_object_or_404(Article, machine_name=article_machine_name)
@@ -24,7 +24,7 @@ def article(request, article_machine_name):
     context['article'] = article
     context['title'] = article.headline + ' - ' + site_name 
 
-    return render(request, 'blog/index.html', context)
+    return render(request, 'blog/article.html', context)
 
 def archive(request, tag):
     archive_list = []

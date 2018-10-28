@@ -251,6 +251,63 @@ table {
     .article-post .share-post h3 {
       margin-left: auto; }
 
+.archive-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.archive-block {
+  background-color: #FFFFF9;
+  box-shadow: 2px 2px 6px 0px rgba(125, 121, 125, 0.71);
+  padding: 10px 10px 0 10px;
+  margin: 25px 10px 5px 10px;
+  max-width: 250px;
+  position: relative;
+  text-align: center;
+  flex-flow: column;
+  display: flex;
+  color: #444; }
+  .archive-block a {
+    color: #ee0000;
+    text-decoration: none; }
+  .archive-block a:active,
+  .archive-block a:focus,
+  .archive-block a:hover {
+    text-decoration: underline; }
+  .archive-block .title {
+    text-decoration: none; }
+    .archive-block .title img {
+      width: 100%; }
+    .archive-block .title .image {
+      margin: -10px;
+      margin-bottom: 10px; }
+    .archive-block .title h1 {
+      color: #444;
+      font-family: "marker_twinsregular";
+      font-size: 24px;
+      font-size: 1.5rem;
+      padding-bottom: 5px; }
+      @media only screen and (max-width: 767px) {
+        .archive-block .title h1 {
+          font-size: 36px;
+          font-size: 2.25rem; } }
+  .archive-block .title:active,
+  .archive-block .title:focus,
+  .archive-block .title:hover {
+    text-decoration: none; }
+  .archive-block .content {
+    flex: 1 1 auto; }
+  .archive-block .by-line {
+    background-color: #D6D6C8;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px -10px 0; }
+    @media only screen and (max-width: 767px) {
+      .archive-block .by-line {
+        font-size: 16px;
+        font-size: 1rem;
+        padding: 8px 10px; } }
+
 .content h1, .content h2, .content h3, .content h4, .content h5, .content p, .content ul, .content ol {
   margin: 15px;
   line-height: 1.5; }

@@ -11,6 +11,7 @@ class Article(models.Model):
     body = RichTextUploadingField()
     pub_date = models.DateTimeField('date published')
     header_image  = models.FileField(upload_to='banners/%Y/%m/%d/', null=True)
+    header_image_small  = models.FileField(upload_to='banners_small/%Y/%m/%d/', null=True)
     tags = TagField()
 
 
