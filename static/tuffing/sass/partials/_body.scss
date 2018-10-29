@@ -13,11 +13,13 @@
 		@include mq('tablet', 'max') {
 			padding-left: 10px;
 			padding-right: 10px;
+			flex-basis: inherit;
 		}
 	}
 
 	.right-col {
 		margin-left: auto;
+		padding-bottom: 20px;
 		flex-basis: 250px;
 
 		@include mq('tablet', 'max') {

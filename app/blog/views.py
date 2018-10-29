@@ -36,6 +36,7 @@ def archive(request, tag):
     context = getSidebarVariables()
     context['archive_list'] = archive_list
     context['title'] = tag + ' - ' + site_name 
+    context['tag'] = tag
 
     return render(request, 'blog/archive.html', context)
 

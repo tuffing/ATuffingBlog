@@ -176,9 +176,11 @@ table {
     @media only screen and (max-width: 767px) {
       .body-wrapper .left-col {
         padding-left: 10px;
-        padding-right: 10px; } }
+        padding-right: 10px;
+        flex-basis: inherit; } }
   .body-wrapper .right-col {
     margin-left: auto;
+    padding-bottom: 20px;
     flex-basis: 250px; }
     @media only screen and (max-width: 767px) {
       .body-wrapper .right-col {
@@ -251,9 +253,19 @@ table {
     .article-post .share-post h3 {
       margin-left: auto; }
 
+.archive-title {
+  display: block;
+  font-size: 1.5rem;
+  font-family: "marker_twinsregular";
+  padding: 10px;
+  background-color: #EAEAEA;
+  margin: 5px 10px;
+  line-height: 1;
+  box-shadow: 2px 2px 6px 0px rgba(125, 121, 125, 0.71); }
+
 .archive-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap; }
 
 .archive-block {
@@ -267,6 +279,18 @@ table {
   flex-flow: column;
   display: flex;
   color: #444; }
+  @media only screen and (max-width: 767px) {
+    .archive-block {
+      max-width: 43%;
+      width: 43%; } }
+  @media only screen and (max-width: 639px) {
+    .archive-block {
+      max-width: 40%;
+      width: 40%; } }
+  @media only screen and (max-width: 559px) {
+    .archive-block {
+      width: 100%;
+      max-width: 100%; } }
   .archive-block a {
     color: #ee0000;
     text-decoration: none; }
@@ -284,13 +308,13 @@ table {
     .archive-block .title h1 {
       color: #444;
       font-family: "marker_twinsregular";
-      font-size: 24px;
-      font-size: 1.5rem;
+      font-size: 20px;
+      font-size: 1.25rem;
       padding-bottom: 5px; }
       @media only screen and (max-width: 767px) {
         .archive-block .title h1 {
-          font-size: 36px;
-          font-size: 2.25rem; } }
+          font-size: 20px;
+          font-size: 1.25rem; } }
   .archive-block .title:active,
   .archive-block .title:focus,
   .archive-block .title:hover {
@@ -301,11 +325,13 @@ table {
     background-color: #D6D6C8;
     font-weight: bold;
     padding: 10px;
+    font-size: 15px;
+    font-size: 0.9375rem;
     margin: 5px -10px 0; }
     @media only screen and (max-width: 767px) {
       .archive-block .by-line {
-        font-size: 16px;
-        font-size: 1rem;
+        font-size: 12px;
+        font-size: 0.75rem;
         padding: 8px 10px; } }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content p, .content ul, .content ol {

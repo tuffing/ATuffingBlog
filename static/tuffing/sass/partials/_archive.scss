@@ -1,7 +1,18 @@
+.archive-title {
+	display: block;
+	font-size: 1.5rem;
+	font-family: "marker_twinsregular";
+	padding: 10px;
+	background-color: $color-secondary-1-2;
+    margin: 5px 10px;
+	line-height: 1;
+	box-shadow: 2px 2px 6px 0px rgba(125,121,125,0.71);
+}
+
 .archive-wrapper {
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;	
+	justify-content: left;
+	flex-wrap: wrap;
 }
 
 .archive-block {
@@ -16,6 +27,19 @@
     display: flex;	
 
 	color: $primary-body-text;
+
+	@include mq('tablet', 'max') {
+		max-width: 43%;
+		width: 43%;
+	}
+	@include mq('tablet-small', 'max') {
+		max-width: 40%;
+		width: 40%;
+	}
+	@include mq('phablet', 'max') {
+		width: 100%;
+		max-width: 100%;
+	}
 
 	a {
 		color: $primary-body-links;
@@ -43,11 +67,11 @@
 		h1 {
 			color: $primary-body-text;
 			font-family: $header-font-family;
-			@include font-size(24px);
+			@include font-size(20px);
 			padding-bottom: 5px;
 
 			@include mq('tablet', 'max') {
-				@include font-size(36px);
+				@include font-size(20px);
 			}
 		}
 	}
@@ -66,10 +90,11 @@
 		background-color: $color-primary-3;
 		font-weight: bold;
 		padding: 10px;
+		@include font-size(15px);
 		margin: 5px -10px 0;
 
 		@include mq('tablet', 'max') {
-			@include font-size(16px);
+			@include font-size(12px);
 			padding: 8px 10px;
 		}
 	}
