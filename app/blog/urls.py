@@ -11,4 +11,3 @@ urlpatterns = [
     path('archive/<tag>/', archive, name='archive'),
     #path('blog/', ListArticleView.as_view(), name="articles-all")
 ]
-

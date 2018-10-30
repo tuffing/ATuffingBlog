@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ko!#*f6dwqby6vgs!9v@d%pvi4u7iznz=tearz(t^=u$@n1pxi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['tuffingadmin.localhost']
 
@@ -151,4 +151,23 @@ CKEDITOR_CONFIGS = {
             ['RemoveFormat', 'Source']
         ]
     }
+}
+
+LOGGING = {
+   'version': 1,
+   'disable_existing_loggers': False,
+   'handlers': {
+       'file': {
+           'level': 'DEBUG',
+           'class': 'logging.FileHandler',
+           'filename': '/home/docker/persistent/logging/debug.log',
+       },
+   },
+   'loggers': {
+       'django': {
+           'handlers': ['file'],
+           'level': 'DEBUG',
+           'propagate': True,
+       },
+   },
 }

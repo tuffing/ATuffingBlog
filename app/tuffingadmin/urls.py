@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
-from django.conf.urls import url
+from django.conf.urls import url, handler404, handler500
+from blog import views as blog_views
 
 urlpatterns = [
     #path('blog/', include('blog.urls')),
@@ -23,3 +24,6 @@ urlpatterns = [
     path('', include('blog.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls'))
 ]
+
+handler404 = 'blog.views.handler404' #blog_views.error_404
+handler500 = 'blog.views.handler500'

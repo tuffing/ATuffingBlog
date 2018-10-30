@@ -11,6 +11,7 @@ services:
       - ./app:/home/docker/code/app/
       - ./static:/home/docker/volatile/static
       - ./media:/home/docker/persistent/media
+      - ./logging:/home/docker/persistent/logging
     labels:
       - 'traefik.backend=nginx'
       - 'traefik.port=80'

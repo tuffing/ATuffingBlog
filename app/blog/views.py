@@ -46,6 +46,20 @@ def getSidebarVariables():
 
     return {'latest_articles': latest_articles, 'tags': tags}
 
+def handler404(request, exception):
+        context = getSidebarVariables()
+        context['title'] = '404 page not found - ' + site_name 
+
+        return render(request,'blog/errors/404.html', context,  status=404)
+
+def handler500(request, exception):
+        context = getSidebarVariables()
+        context['title'] = '500 Something broke - ' + site_name 
+
+        #context= { 'title' : '500 Something broke - ' + site_name }
+
+        return render(request,'blog/errors/500.html', context,  status=500)
+
 
 # @TODO move over into actual api module
 class ListArticleView(generics.ListAPIView):
