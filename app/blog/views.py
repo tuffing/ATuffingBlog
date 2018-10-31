@@ -48,7 +48,7 @@ def getSidebarVariables():
 
 def handler404(request, exception):
         context = getSidebarVariables()
-        context['title'] = '404 page not found - ' + site_name 
+        context['title'] = '404 page not found - ' + site_name
 
         return render(request,'blog/errors/404.html', context,  status=404)
 

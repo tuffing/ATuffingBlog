@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ title }}</title>
+    <title>500 Something broke</title>
 
     <link rel="stylesheet" href="/static/tuffing/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -42,44 +42,23 @@
 
 
     <div class="body-wrapper">  
-        {% block content %}
-        {% endblock %}
 
-        {% block sidebar %}
-            <div class="right-col">
-                <div id="Sidebar">
-                    <section class="share-post">
-                        <h1>Follow A Tuffing Blog</h1>
-                        <div class="content">
-                            <a href="/"><img src="/static/tuffing/images/social-media/github.png" height="40" width="40" alt="View Logans Github account" /></a>
-                            <a href="/"><img src="/static/tuffing/images/social-media/linkedin.png" height="40" width="40" alt="View Logans Linkedin page" /></a>
-                            <a href="/"><img src="/static/tuffing/images/social-media/twitter.png" height="40" width="40" alt="View Tuffing Blogs twitter feed" /></a>
-                        </div>
-                    </section>
+		<div class="left-col">
+			<article class="article-post">
+				<header>
+					<a class="title" href="/">
+						<h1>Page failed to load.</h1>
+					</a>
+					<div class="by-line">
+						Crap.
+					</div>
+				</header>
 
-                    <section class="recent-articles">
-                        <h1>Recent Articles</h1>
-                        <ul>
-                            {% for article in latest_articles %}
-                                <li><a href="{% url 'blog:article' article.machine_name %}">{{article.headline}}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </section>
-
-                    <section class="archive-tags">
-                        <h1>Archive</h1>
-
-                        <ul>
-                            <li class="pill pill-emphasis"><a href="{% url 'blog:archive' 'all' %}">All</a></li>
-                            {% for tag in tags %}
-                                <li class="pill"><a href="{% url 'blog:archive' tag.name %}">{{tag.name}}</a></li>
-                            {% endfor %}
-                        </ul>
-
-                    </section>
-                </div>
-            </div>
-        {% endblock %}
+				<div class="content">
+					500 - something broke!
+				</div>
+			</article>
+		</div>
     </div>
 
     <footer id="Keel">
