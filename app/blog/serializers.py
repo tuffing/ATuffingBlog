@@ -5,4 +5,4 @@ from .models import Article
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = ("headline", "machine_name", "body", "pub_date")
+        fields = ("headline", "machine_name", "tags", "body", "pub_date", "teaser", "author", "header_image", "header_image_small")

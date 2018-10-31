@@ -12,32 +12,45 @@ class BaseViewTest(APITestCase):
     client = APIClient()
 
     @staticmethod
-    def create_article(headline="", url="", body="", date = "2018-10-01T23:22:09+00:00"):
+    def create_article(headline="", url="", tags="", body="", date = "2018-10-01T23:22:09+00:00", teaser="", author=""):
         if headline != "" and url != "" and body != "":
-            Article.objects.create(headline=headline, machine_name=url, body=body, pub_date=date)
+            Article.objects.create(headline=headline, machine_name=url, tags=tags, body=body, pub_date=date, teaser=teaser, author=author, header_image="banners/2018/10/24/935x200.png", header_image_small="banners_small/2018/10/28/250x80.png")
 
     def setUp(self):
         # add test data
-        self.create_article("one", "one_url", "<p>woah1</p>", "2018-10-06T23:22:09+00:00")
-        self.create_article("two", "two_url", "<p>woah2</p>", "2018-10-07T23:22:09+00:00")
-        self.create_article("three", "three_url", "<p>woah3</p>", "2018-10-08T23:22:09+00:00")
-        self.create_article("four", "four_url", "<p>woah4</p>", "2018-10-09T23:22:09+00:00")
+        self.create_article("one", "one_url", "tag1", "<p>woah1</p>", "2018-10-06T23:22:09+00:00", "teaser", "username")
+        self.create_article("two", "two_url", "tag2,tag5", "<p>woah2</p>", "2018-10-07T23:22:09+00:00", "teaser", "username")
+        self.create_article("three", "three_url", "tag3", "<p>woah3</p>", "2018-10-08T23:22:09+00:00", "teaser", "username")
+        self.create_article("four", "four_url", "tag4", "<p>woah4</p>", "2018-10-09T23:22:09+00:00", "teaser", "username")
 
 
-class GetAllArticlesTest(BaseViewTest):
 
-    def test_get_all_articles(self):
-        """
-        This test ensures that all articles added in the setUp method
-        exist when we make a GET request to the articles/ endpoint
-        """
-        # hit the API endpoint
-        response = self.client.get(
-            reverse("articles-all", kwargs={"version": "v1"})
-        )
-        # fetch the data from db
-        expected = Article.objects.all()
-        serialized = ArticleSerializer(expected, many=True)
-        self.assertEqual(response.data, serialized.data)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-# Create your tests here.
+class BlogTests(BaseViewTest):
+
+    def test_homepage(self):
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_article_page_good(self):
+        response = self.client.get('/two_url/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_article_page_bad(self):
+        response = self.client.get('/fake_url/')
+        self.assertEqual(response.status_code, 404)
+
+    def test_archive_page_all_good(self):
+        response = self.client.get('/archive/all/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_archive_page_tag_good(self):
+        response = self.client.get('/archive/tag1/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_archive_page_tag_multi_good(self):
+        response = self.client.get('/archive/tag5/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_archive_page_tag_bad(self):
+        response = self.client.get('/archive/fake_tag/')
+        self.assertEqual(response.status_code, 404)
