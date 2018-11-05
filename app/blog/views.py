@@ -14,7 +14,8 @@ def index(request):
     latest = Article.objects.order_by('-pub_date')[:1].get()
     context = getSidebarVariables()
     context['article'] = latest
-    context['title'] = site_name + ' - Homepage'
+    context['title'] = '%s - Homepage' % site_name
+    context['description'] = 'Author: %s,  published: %s,  tags: %s, teaser: %s'  % (latest.author, latest.pub_date, latest.tags, latest.teaser)
 
     return render(request, 'blog/article.html', context)
 
@@ -22,7 +23,9 @@ def article(request, article_machine_name):
     article = get_object_or_404(Article, machine_name=article_machine_name)
     context = getSidebarVariables()
     context['article'] = article
-    context['title'] = article.headline + ' - ' + site_name 
+    context['title'] = '%s - %s' % (article.headline, site_name)
+    context['description'] = 'Author: %s,  published: %s, tags: %s, teaser: %s'  % (article.author, article.pub_date, article.tags, article.teaser)
+
 
     return render(request, 'blog/article.html', context)
 
@@ -37,7 +40,9 @@ def archive(request, tag):
 
     context = getSidebarVariables()
     context['archive_list'] = archive_list
-    context['title'] = tag + ' - ' + site_name 
+    context['title'] = '%s - %s' % (tag, site_name) 
+    context['description'] = 'Archive page, topic: %s'  % (tag)
+
     context['tag'] = tag
 
     return render(request, 'blog/archive.html', context)
@@ -50,13 +55,14 @@ def getSidebarVariables():
 
 def handler404(request, exception=None):
         context = getSidebarVariables()
-        context['title'] = '404 page not found - ' + site_name
+        context['title'] = '404 page not found - %s' % site_name
+        context['description'] = 'Error page'
 
         return render(request,'blog/errors/404.html', context,  status=404)
 
 def handler500(request, exception=None):
         context = getSidebarVariables()
-        context['title'] = '500 Something broke - ' + site_name 
+        context['title'] = '500 Something broke - %s' % site_name 
 
         #context= { 'title' : '500 Something broke - ' + site_name }
 

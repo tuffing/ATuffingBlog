@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>{{ title }}</title>
 
@@ -12,9 +12,12 @@
     <link rel="manifest" href="{% static 'tuffing/images/favicons/site.webmanifest' %}/static/tuffing/images/favicons/">
     <link rel="mask-icon" href="{% static 'tuffing/images/favicons/apple-touch-icon.png safari-pinned-tab.svg' %}" color="#5bbad5">
     <link rel="shortcut icon" href="{% static 'tuffing/images/favicons/favicon.ico' %}">
+    
     <meta name="msapplication-TileColor" content="#f9f9f9">
     <meta name="msapplication-config" content="{% static 'tuffing/images/favicons/browserconfig.xml' %}">
     <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="{{description|striptags}}">
 </head>
 <body>
 
@@ -28,7 +31,7 @@
             <a href="/"><img src="/static/tuffing/images/social-media/twitter.png" height="50" width="50" alt="View Tuffing Blogs twitter feed" /></a>
         </div>
 
-        <div id="CodeDecoration">
+        <div id="CodeDecoration" aria-hidden="true">
 <pre>
     <span class="prime">var</span> <span class="function-name">helloBlog</span> = <span class="prime">function</span>(<span class="parameter">blogName</span> = <span class="string">'Tuffings Blog'</span>, <span class="parameter">repeatX</span> = <span class="number">1000</span>) {
         <span class="loop">for</span> (var i =  <span class="number">0</span>; i < repeatX; i++) {

@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ko!#*f6dwqby6vgs!9v@d%pvi4u7iznz=tearz(t^=u$@n1pxi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['tuffingadmin.localhost']
 

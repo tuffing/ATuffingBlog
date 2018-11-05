@@ -6,6 +6,12 @@
 
 	color: $primary-body-text;
 
+	@media print {
+		box-shadow: none !important;
+		margin-top: 10px;
+		background-color: transparent;
+	}
+
 	a {
 		color: $primary-body-links;
 		text-decoration: none;
@@ -70,6 +76,10 @@
 				@include font-size(24px);
 			}
 		}
+
+		@media print {
+			display: none !important;
+		}
 	}
 
 	.share-post {
@@ -79,6 +89,10 @@
 		
 		h3 {
 			margin-left: auto;
+		}
+
+		@media print {
+			display: none !important;
 		}
 	}
 }
