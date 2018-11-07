@@ -20,6 +20,15 @@
 		font-style: italic;
 	}
 
+	img {
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 10px;
+
+		height: auto !important;
+		max-width: 100%;
+	}
+
 
 	h2 {
 		@include font-size(36px);
