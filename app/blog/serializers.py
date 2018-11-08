@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Article
+from blog.models import Article
 
 #@TODO move over to proper api app
 class ArticleSerializer(serializers.ModelSerializer):

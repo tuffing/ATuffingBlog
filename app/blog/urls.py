@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, article,archive,ListArticleView
+from .views import index, article,archive
 
 #from . import views
 

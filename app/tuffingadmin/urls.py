@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from django.conf.urls import url, handler404, handler500
-from blog import views as blog_views
 
 urlpatterns = [
     #path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
+    re_path('api/(?P<version>(v1|v2))/', include('api.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls'))
 ]
 

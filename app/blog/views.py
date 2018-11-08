@@ -4,7 +4,6 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, Http404
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import ArticleSerializer
 
 from .models import Article
 
@@ -68,11 +67,3 @@ def handler500(request, exception=None):
 
         return render(request,'blog/errors/500.html', context,  status=500)
 
-
-# @TODO move over into actual api module
-class ListArticleView(generics.ListAPIView):
-    """
-    Provides a get method handler to fetch an article.
-    """
-    queryset = Article.objects.all()
-    serializer_class = ArticleSerializer
