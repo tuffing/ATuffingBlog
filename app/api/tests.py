@@ -1,4 +1,5 @@
 from django.urls import reverse
+from django.shortcuts import get_object_or_404, render 
 from rest_framework.test import APITestCase, APIClient
 from rest_framework.views import status
 from blog.models import Article
@@ -26,7 +27,7 @@ class BaseViewTest(APITestCase):
 
 class GetAllArticlesTest(BaseViewTest):
 
-    def test_get_all_articles(self):
+    def test_api_get_all_articles(self):
         """
         This test ensures that all articles added in the setUp method
         exist when we make a GET request to the articles/ endpoint
@@ -41,4 +42,17 @@ class GetAllArticlesTest(BaseViewTest):
         expected = Article.objects.all()
         serialized = ArticleSerializer(expected, many=True)
         self.assertEqual(response.data, serialized.data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)    
+
+    def test_api_get_article(self):
+        """
+        Test fetching an article by machine_name
+        """
+        response = self.client.get('/api/v1/articles/get/two_url?format=json')
+
+        # fetch the data from db
+        expected = Article.objects.get(machine_name='two_url')
+        serialized = ArticleSerializer(expected, many=False)
+        test = serialized.data
+        self.assertEqual(response.data, test)
         self.assertEqual(response.status_code, status.HTTP_200_OK)

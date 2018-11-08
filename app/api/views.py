@@ -11,3 +11,13 @@ class ListArticleView(generics.ListAPIView):
     """
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
+
+# Create your views here.
+class GetArticleView(generics.RetrieveAPIView):
+    """
+    Provides a get method handler to fetch an article.
+    """
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+    lookup_field = 'machine_name'
+    lookup_url_kwarg = 'id'
