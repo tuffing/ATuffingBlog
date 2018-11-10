@@ -56,3 +56,39 @@ class GetAllArticlesTest(BaseViewTest):
         test = serialized.data
         self.assertEqual(response.data, test)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_api_most_recent_article(self):
+        """
+        Test fetching most recent article 
+        """
+        response = self.client.get('/api/v1/articles/recent/?format=json')
+
+        # fetch the data from db
+        expected = Article.objects.filter(machine_name='four_url')
+        serialized = ArticleSerializer(expected, many=True)
+        self.assertEqual(response.data, serialized.data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_api_most_recent_article_offset_single(self):
+        """
+        Test fetching most recent article with an offset
+        """
+        response = self.client.get('/api/v1/articles/recent/?start_index=1&format=json')
+
+        # fetch the data from db
+        expected = Article.objects.filter(machine_name='three_url')
+        serialized = ArticleSerializer(expected, many=True)
+        self.assertEqual(response.data, serialized.data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_api_most_recent_article_range(self):
+        """
+        Test fetching most recent article using a range
+        """
+        response = self.client.get('/api/v1/articles/recent/?start_index=1&end_index=3&format=json')
+
+        # fetch the data from db
+        expected = Article.objects.order_by('-pub_date')[1:3]
+        serialized = ArticleSerializer(expected, many=True)
+        self.assertEqual(response.data, serialized.data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
