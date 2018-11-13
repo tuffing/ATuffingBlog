@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 
 # Create your views here.
 from django.http import HttpResponse, Http404
+from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from rest_framework import generics
 
@@ -13,15 +14,26 @@ def index(request):
     latest = Article.objects.order_by('-pub_date')[:1].get()
     context = getSidebarVariables()
     context['article'] = latest
+    context['class'] = 'homepage'
     context['title'] = '%s - Homepage' % site_name
     context['description'] = 'Author: %s,  published: %s,  tags: %s, teaser: %s'  % (latest.author, latest.pub_date, latest.tags, latest.teaser)
 
     return render(request, 'blog/article.html', context)
 
+
+def fetchArticles(request, offset):
+    try:
+        context = {'article': Article.objects.order_by('-pub_date')[offset:offset + 1].get()}
+    except ObjectDoesNotExist:
+        raise Http404
+
+    return render(request, 'blog/article-nochrome.html', context)
+
 def article(request, article_machine_name):
     article = get_object_or_404(Article, machine_name=article_machine_name)
     context = getSidebarVariables()
     context['article'] = article
+    context['class'] = 'article %s' % (article.machine_name)
     context['title'] = '%s - %s' % (article.headline, site_name)
     context['description'] = 'Author: %s,  published: %s, tags: %s, teaser: %s'  % (article.author, article.pub_date, article.tags, article.teaser)
 
@@ -41,6 +53,8 @@ def archive(request, tag):
     context['archive_list'] = archive_list
     context['title'] = '%s - %s' % (tag, site_name) 
     context['description'] = 'Archive page, topic: %s'  % (tag)
+    context['class'] = 'archive archive-tag'
+
 
     context['tag'] = tag
 

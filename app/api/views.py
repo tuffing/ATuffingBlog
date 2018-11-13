@@ -48,3 +48,4 @@ class GetMostRecentArticles(generics.ListAPIView):
         
 
         return queryset
+

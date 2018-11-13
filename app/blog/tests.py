@@ -53,3 +53,15 @@ class BlogTests(BaseViewTest):
     def test_archive_page_tag_bad(self):
         response = self.client.get('/archive/fake_tag/')
         self.assertEqual(response.status_code, 404)
+
+    def test_fetch_articles_offset_good(self):
+        response = self.client.get('/fetchArticlesOffset/1/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_fetch_articles_offset_out_of_range(self):
+        response = self.client.get('/fetchArticlesOffset/4/')
+        self.assertEqual(response.status_code, 404)
+
+    def test_fetch_articles_offset_not_int(self):
+        response = self.client.get('/fetchArticlesOffset/notanint/')
+        self.assertEqual(response.status_code, 404)
