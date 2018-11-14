@@ -10462,3 +10462,1007 @@ Not Found: /fetchArticlesOffset/4/
 (0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
 (0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
 (0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.5/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'None': None, 'False': False, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fe5e6364d30>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe5e4f2d1e0>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fe5e5d48898>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/blog/article/1/change/'>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fe5e4ec52b0>}, {}, {'site_header': 'Django administration', 'has_permission': False, 'site_url': '/', 'site_name': 'tuffingadmin.localhost', 'next': '/admin/blog/article/1/change/', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'app_path': '/admin/login/?next=/admin/blog/article/1/change/', 'available_apps': [], 'view': <django.contrib.auth.views.LoginView object at 0x7fe5e6375cc0>, 'LANGUAGE_BIDI': False, 'site_title': 'Django site admin', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fe5e4f0a518>, 'title': 'Log in', 'username': '', 'LANGUAGE_CODE': 'en-us'}]
+Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.5/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'None': None, 'False': False, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fe5e6364d30>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe5e4f2d1e0>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fe5e5d48898>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/blog/article/1/change/'>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fe5e4ec52b0>}, {}, {'site_header': 'Django administration', 'has_permission': False, 'site_url': '/', 'site_name': 'tuffingadmin.localhost', 'next': '/admin/blog/article/1/change/', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'app_path': '/admin/login/?next=/admin/blog/article/1/change/', 'available_apps': [], 'view': <django.contrib.auth.views.LoginView object at 0x7fe5e6375cc0>, 'LANGUAGE_BIDI': False, 'site_title': 'Django site admin', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fe5e4f0a518>, 'title': 'Log in', 'username': '', 'LANGUAGE_CODE': 'en-us'}]
+(0.460) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."machine_name" = 'favicon.ico'; args=('favicon.ico',)
+(0.460) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."machine_name" = 'favicon.ico'; args=('favicon.ico',)
+Not Found: /favicon.ico/
+Not Found: /favicon.ico/
+(0.170) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'root'; args=('root',)
+(0.080) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'  LIMIT 1; args=('gjz31sm6zu3td1u8wf5smtg8uhk3r5rk',)
+(0.044) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('gjz31sm6zu3td1u8wf5smtg8uhk3r5rk', 'ZDE4NjY5M2ZiOGRjNmI4ODQwM2QzZGZhNDM1NWE5NDg3ZmZmYzFkZTp7fQ==', '2018-11-28T08:17:08.576503+00:00'::timestamptz); args=('gjz31sm6zu3td1u8wf5smtg8uhk3r5rk', 'ZDE4NjY5M2ZiOGRjNmI4ODQwM2QzZGZhNDM1NWE5NDg3ZmZmYzFkZTp7fQ==', datetime.datetime(2018, 11, 28, 8, 17, 8, 576503, tzinfo=<UTC>))
+(0.041) UPDATE "auth_user" SET "last_login" = '2018-11-14T08:17:08.636698+00:00'::timestamptz WHERE "auth_user"."id" = 1; args=(datetime.datetime(2018, 11, 14, 8, 17, 8, 636698, tzinfo=<UTC>), 1)
+(0.001) UPDATE "django_session" SET "session_data" = 'ZTlhOGUwMzFiYzE2YzIzZjRiYTc5ZWZjZjFmNjk2ZDY3NzI5YzM3Yjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiIxMDBmNDY1NmJmN2ZiNmQ1YjlmMDE3ODFjYTgxNGQ3OThiOGE3ODFiIn0=', "expire_date" = '2018-11-28T08:17:08.704293+00:00'::timestamptz WHERE "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'; args=('ZTlhOGUwMzFiYzE2YzIzZjRiYTc5ZWZjZjFmNjk2ZDY3NzI5YzM3Yjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiIxMDBmNDY1NmJmN2ZiNmQ1YjlmMDE3ODFjYTgxNGQ3OThiOGE3ODFiIn0=', datetime.datetime(2018, 11, 28, 8, 17, 8, 704293, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.016) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:17:08.724676+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 17, 8, 724676, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."id" = 1; args=(1,)
+(0.215) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 1 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(1,)
+(0.051) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'article'); args=('blog', 'article')
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:17:09.759651+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 17, 9, 759651, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 2 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(2,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.004) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:17:22.500445+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 17, 22, 500445, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.048) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=()
+(0.001) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."id" DESC; args=()
+Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.5/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe5e4c8b268>>, 'False': False, 'True': True}]
+Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:17:22.783757+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 17, 22, 783757, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:17:26.154014+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 17, 26, 154014, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:17:26.258349+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 17, 26, 258349, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:19:33.754435+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 19, 33, 754435, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.048) INSERT INTO "blog_article" ("headline", "machine_name", "author", "teaser", "body", "pub_date", "header_image", "header_image_small") VALUES ('yet another', 'yet_another', 'logn', '<p>dsfsd fsdf sdfa afsf</p>', '<p>Lorem ipsum dolor sit amet, solet apeirian aliquando ut est. Delenit maiestatis reformidans qui cu, has in quaerendum efficiantur, in scripta delenit ancillae sea. Nobis aperiri duo id, commune nominavi dignissim cu nec. Idque paulo tacimates pri eu, ex graeco definitiones mel, usu homero assueverit ut.</p>
+
+<p>Eu his eripuit impedit dignissim. An mei erant laboramus persecuti, dolor antiopam id his, te qui illum soleat probatus! Ea petentium necessitatibus sed, mel ut pericula molestiae appellantur! Inermis nonumes mnesarchum eos ad, nec ei dictas sadipscing.</p>
+
+<p>Eos laboramus democritum eu. Eam ei detracto perpetua, gloriatur adolescens in qui. Unum eirmod vel ut, eripuit nostrum principes ne pro. Eos ei dolore quodsi corpora, quo dicta possit alienum an, nam audiam utroque vivendo ei.</p>
+
+<p>Wisi option ei duo, eros minimum praesent ad pro. Munere timeam cum te, laudem voluptatibus pri eu! Ut sed vide falli pertinacia, mel officiis recusabo cu! Vivendo percipit pri te, has id etiam oratio deseruisse? Tale dico munere has ne.</p>
+
+<p>Has ne iudicabit reprimique instructior! Sea id utinam sensibus qualisque, per no nobis omittantur. Eligendi inimicus mei ad, at usu oporteat verterem lucilius? Est ei esse tollit senserit. Sit diam clita ea, ne consul conclusionemque vituperatoribus vim, no laoreet docendi qui.</p>
+
+<p>Eu pro lorem discere inciderint. Mediocrem deseruisse sit no, ut sit harum affert debitis. Accusam abhorreant rationibus eam ei! Ipsum singulis an qui, ea mel persius consetetur! Cum in etiam senserit similique! Movet platonem ad eum, an his purto tation signiferumque.</p>
+
+<p>Pri suas essent constituto ea, pri clita putent percipit no. Per ei stet theophrastus. Sit in causae audire disputationi, quot bonorum ne has. Quaeque discere ut vis, mutat liber malorum eu mel. Ut nec oratio iuvaret.</p>
+
+<p>Nec cu discere volutpat, usu cu cetero reprehendunt. His nostro malorum contentiones ut, purto dolorum albucius sit an. Labitur sanctus fabulas ad sed. Sit eirmod epicuri te, duo laudem labore interpretaris ne.</p>
+
+<p>Pro no quaeque tibique tincidunt, ut appetere tractatos eam? His ex sint sonet primis, conceptam repudiandae mei id. Eu nisl etiam liber sit, mea doming eloquentiam ad. Id has impedit mediocrem. Reque docendi cum cu.</p>
+
+<p>Prima mandamus nam ei. Et doctus tibique scripserit vix, ei nec legere eripuit, ut vel doctus commodo! Ne noluisse cotidieque sed. Ferri vocibus id pri, te eam virtute aliquando! An doctus fastidii indoctum mei, ullum causae dignissim vim et! Tation copiosae luptatum ne pro. Et cibo integre eos?</p>
+
+<p>Facilis cotidieque ad eum, alterum reprehendunt ea eam.</p>', '2018-11-15T08:19:11+00:00'::timestamptz, 'banners/2018/11/14/935x200-2.png', 'banners_small/2018/11/14/250x80.png') RETURNING "blog_article"."id"; args=('yet another', 'yet_another', 'logn', '<p>dsfsd fsdf sdfa afsf</p>', '<p>Lorem ipsum dolor sit amet, solet apeirian aliquando ut est. Delenit maiestatis reformidans qui cu, has in quaerendum efficiantur, in scripta delenit ancillae sea. Nobis aperiri duo id, commune nominavi dignissim cu nec. Idque paulo tacimates pri eu, ex graeco definitiones mel, usu homero assueverit ut.</p>\r\n\r\n<p>Eu his eripuit impedit dignissim. An mei erant laboramus persecuti, dolor antiopam id his, te qui illum soleat probatus! Ea petentium necessitatibus sed, mel ut pericula molestiae appellantur! Inermis nonumes mnesarchum eos ad, nec ei dictas sadipscing.</p>\r\n\r\n<p>Eos laboramus democritum eu. Eam ei detracto perpetua, gloriatur adolescens in qui. Unum eirmod vel ut, eripuit nostrum principes ne pro. Eos ei dolore quodsi corpora, quo dicta possit alienum an, nam audiam utroque vivendo ei.</p>\r\n\r\n<p>Wisi option ei duo, eros minimum praesent ad pro. Munere timeam cum te, laudem voluptatibus pri eu! Ut sed vide falli pertinacia, mel officiis recusabo cu! Vivendo percipit pri te, has id etiam oratio deseruisse? Tale dico munere has ne.</p>\r\n\r\n<p>Has ne iudicabit reprimique instructior! Sea id utinam sensibus qualisque, per no nobis omittantur. Eligendi inimicus mei ad, at usu oporteat verterem lucilius? Est ei esse tollit senserit. Sit diam clita ea, ne consul conclusionemque vituperatoribus vim, no laoreet docendi qui.</p>\r\n\r\n<p>Eu pro lorem discere inciderint. Mediocrem deseruisse sit no, ut sit harum affert debitis. Accusam abhorreant rationibus eam ei! Ipsum singulis an qui, ea mel persius consetetur! Cum in etiam senserit similique! Movet platonem ad eum, an his purto tation signiferumque.</p>\r\n\r\n<p>Pri suas essent constituto ea, pri clita putent percipit no. Per ei stet theophrastus. Sit in causae audire disputationi, quot bonorum ne has. Quaeque discere ut vis, mutat liber malorum eu mel. Ut nec oratio iuvaret.</p>\r\n\r\n<p>Nec cu discere volutpat, usu cu cetero reprehendunt. His nostro malorum contentiones ut, purto dolorum albucius sit an. Labitur sanctus fabulas ad sed. Sit eirmod epicuri te, duo laudem labore interpretaris ne.</p>\r\n\r\n<p>Pro no quaeque tibique tincidunt, ut appetere tractatos eam? His ex sint sonet primis, conceptam repudiandae mei id. Eu nisl etiam liber sit, mea doming eloquentiam ad. Id has impedit mediocrem. Reque docendi cum cu.</p>\r\n\r\n<p>Prima mandamus nam ei. Et doctus tibique scripserit vix, ei nec legere eripuit, ut vel doctus commodo! Ne noluisse cotidieque sed. Ferri vocibus id pri, te eam virtute aliquando! An doctus fastidii indoctum mei, ullum causae dignissim vim et! Tation copiosae luptatum ne pro. Et cibo integre eos?</p>\r\n\r\n<p>Facilis cotidieque ad eum, alterum reprehendunt ea eam.</p>', datetime.datetime(2018, 11, 15, 8, 19, 11, tzinfo=<UTC>), 'banners/2018/11/14/935x200-2.png', 'banners_small/2018/11/14/250x80.png')
+(0.003) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.066) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" WHERE UPPER("blog_tagulous_article_tags"."name"::text) = UPPER('test'); args=('test',)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" WHERE UPPER("blog_tagulous_article_tags"."name"::text) = UPPER('test'); args=('test',)
+(0.000) SAVEPOINT "s140625517082368_x1"; args=None
+(0.000) SAVEPOINT "s140625517082368_x2"; args=None
+(0.079) INSERT INTO "blog_tagulous_article_tags" ("name", "slug", "count", "protected") VALUES ('test', 'test', 0, false) RETURNING "blog_tagulous_article_tags"."id"; args=('test', 'test', 0, False)
+(0.001) RELEASE SAVEPOINT "s140625517082368_x2"; args=None
+(0.000) RELEASE SAVEPOINT "s140625517082368_x1"; args=None
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article_tags"."tagulous_article_tags_id" FROM "blog_article_tags" WHERE ("blog_article_tags"."article_id" = 3 AND "blog_article_tags"."tagulous_article_tags_id" IN (2)); args=(3, 2)
+(0.005) INSERT INTO "blog_article_tags" ("article_id", "tagulous_article_tags_id") VALUES (3, 2) RETURNING "blog_article_tags"."id"; args=(3, 2)
+(0.024) UPDATE "blog_tagulous_article_tags" SET "count" = ("blog_tagulous_article_tags"."count" + 1) WHERE "blog_tagulous_article_tags"."id" = 2; args=(1, 2)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" WHERE "blog_tagulous_article_tags"."id" = 2; args=(2,)
+(0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'blog' AND "django_content_type"."model" = 'article'); args=('blog', 'article')
+(0.045) INSERT INTO "django_admin_log" ("action_time", "user_id", "content_type_id", "object_id", "object_repr", "action_flag", "change_message") VALUES ('2018-11-14T08:19:34.067243+00:00'::timestamptz, 1, 7, '3', 'yet another', 1, '[{"added": {}}]') RETURNING "django_admin_log"."id"; args=(datetime.datetime(2018, 11, 14, 8, 19, 34, 67243, tzinfo=<UTC>), 1, 7, '3', 'yet another', 1, '[{"added": {}}]')
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:19:34.146718+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 19, 34, 146718, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=()
+(0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."id" DESC; args=()
+Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.5/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe5e4c75730>>, 'False': False, 'True': True}]
+Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:19:34.249503+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 19, 34, 249503, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.003) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.004) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.003) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.004) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.004) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."machine_name" = 'yet_another'; args=('yet_another',)
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."machine_name" = 'yet_another'; args=('yet_another',)
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."machine_name" = 'yet_another'; args=('yet_another',)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."machine_name" = 'yet_another'; args=('yet_another',)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."machine_name" = 'yet_another'; args=('yet_another',)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."machine_name" = 'yet_another'; args=('yet_another',)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:37:41.016763+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 37, 41, 16763, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."id" = 2; args=(2,)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 2 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(2,)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:37:41.131866+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 37, 41, 131866, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:37:55.749172+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 37, 55, 749172, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" WHERE "blog_article"."id" = 2; args=(2,)
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 2 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(2,)
+(0.001) UPDATE "blog_article" SET "headline" = 'Another article', "machine_name" = 'another_article', "author" = 'logan', "teaser" = '<p>fdsf sf sf fsfsdfs fs s fsf sdf sdfsf sdf s fs fsd fsdf fdgfgdfdgfdg df&nbsp;</p>', "body" = '<p>Lorem ipsum dolor sit amet, solet apeirian aliquando ut est. Delenit maiestatis reformidans qui cu, has in quaerendum efficiantur, in scripta delenit ancillae sea. Nobis aperiri duo id, commune nominavi dignissim cu nec. Idque paulo tacimates pri eu, ex graeco definitiones mel, usu homero assueverit ut.</p>
+
+<p>Eu his eripuit impedit dignissim. An mei erant laboramus persecuti, dolor antiopam id his, te qui illum soleat probatus! Ea petentium necessitatibus sed, mel ut pericula molestiae appellantur! Inermis nonumes mnesarchum eos ad, nec ei dictas sadipscing.</p>
+
+<p>Eos laboramus democritum eu. Eam ei detracto perpetua, gloriatur adolescens in qui. Unum eirmod vel ut, eripuit nostrum principes ne pro. Eos ei dolore quodsi corpora, quo dicta possit alienum an, nam audiam utroque vivendo ei.</p>
+
+<p>Wisi option ei duo, eros minimum praesent ad pro. Munere timeam cum te, laudem voluptatibus pri eu! Ut sed vide falli pertinacia, mel officiis recusabo cu! Vivendo percipit pri te, has id etiam oratio deseruisse? Tale dico munere has ne.</p>
+
+<p>Has ne iudicabit reprimique instructior! Sea id utinam sensibus qualisque, per no nobis omittantur. Eligendi inimicus mei ad, at usu oporteat verterem lucilius? Est ei esse tollit senserit. Sit diam clita ea, ne consul conclusionemque vituperatoribus vim, no laoreet docendi qui.</p>
+
+<p>Eu pro lorem discere inciderint. Mediocrem deseruisse sit no, ut sit harum affert debitis. Accusam abhorreant rationibus eam ei! Ipsum singulis an qui, ea mel persius consetetur! Cum in etiam senserit similique! Movet platonem ad eum, an his purto tation signiferumque.</p>
+
+<p>Pri suas essent constituto ea, pri clita putent percipit no. Per ei stet theophrastus. Sit in causae audire disputationi, quot bonorum ne has. Quaeque discere ut vis, mutat liber malorum eu mel. Ut nec oratio iuvaret.</p>
+
+<p>Nec cu discere volutpat, usu cu cetero reprehendunt. His nostro malorum contentiones ut, purto dolorum albucius sit an. Labitur sanctus fabulas ad sed. Sit eirmod epicuri te, duo laudem labore interpretaris ne.</p>
+
+<p>Pro no quaeque tibique tincidunt, ut appetere tractatos eam? His ex sint sonet primis, conceptam repudiandae mei id. Eu nisl etiam liber sit, mea doming eloquentiam ad. Id has impedit mediocrem. Reque docendi cum cu.</p>
+
+<p>Prima mandamus nam ei. Et doctus tibique scripserit vix, ei nec legere eripuit, ut vel doctus commodo! Ne noluisse cotidieque sed. Ferri vocibus id pri, te eam virtute aliquando! An doctus fastidii indoctum mei, ullum causae dignissim vim et! Tation copiosae luptatum ne pro. Et cibo integre eos?</p>
+
+<p>Facilis cotidieque ad eum, alterum reprehendunt ea eam.</p>
+
+<p>dsfsdf ddsf dsf df da sad sad f dsf sdf dsf dsf dsf asd</p>
+
+<p><img alt="This is some alternative text" longdesc="" src="/media/uploads/2018/11/07/400x300.png" style="height:300px; width:400px" />sdfds sdf sd ffads fs Some hsdfds sdmfksdfiwe ndsnf kjnfufsdjn&nbsp; jnjfnskjd nfsj nkf</p>
+
+<p>cds,flsdfk kjiiwiew jj kjksfj kfj kds kfks kl kj kj k jk jk kkkkk llll ll ;;; sdf dsf sdf</p>
+
+<p>fdsf</p>
+
+<p>dsf</p>
+
+<p>sdfsd</p>', "pub_date" = '2018-10-24T08:18:48+00:00'::timestamptz, "header_image" = 'banners/2018/11/13/935x200-2.png', "header_image_small" = 'banners_small/2018/10/28/250x80_oHxmf1D.png' WHERE "blog_article"."id" = 2; args=('Another article', 'another_article', 'logan', '<p>fdsf sf sf fsfsdfs fs s fsf sdf sdfsf sdf s fs fsd fsdf fdgfgdfdgfdg df&nbsp;</p>', '<p>Lorem ipsum dolor sit amet, solet apeirian aliquando ut est. Delenit maiestatis reformidans qui cu, has in quaerendum efficiantur, in scripta delenit ancillae sea. Nobis aperiri duo id, commune nominavi dignissim cu nec. Idque paulo tacimates pri eu, ex graeco definitiones mel, usu homero assueverit ut.</p>\r\n\r\n<p>Eu his eripuit impedit dignissim. An mei erant laboramus persecuti, dolor antiopam id his, te qui illum soleat probatus! Ea petentium necessitatibus sed, mel ut pericula molestiae appellantur! Inermis nonumes mnesarchum eos ad, nec ei dictas sadipscing.</p>\r\n\r\n<p>Eos laboramus democritum eu. Eam ei detracto perpetua, gloriatur adolescens in qui. Unum eirmod vel ut, eripuit nostrum principes ne pro. Eos ei dolore quodsi corpora, quo dicta possit alienum an, nam audiam utroque vivendo ei.</p>\r\n\r\n<p>Wisi option ei duo, eros minimum praesent ad pro. Munere timeam cum te, laudem voluptatibus pri eu! Ut sed vide falli pertinacia, mel officiis recusabo cu! Vivendo percipit pri te, has id etiam oratio deseruisse? Tale dico munere has ne.</p>\r\n\r\n<p>Has ne iudicabit reprimique instructior! Sea id utinam sensibus qualisque, per no nobis omittantur. Eligendi inimicus mei ad, at usu oporteat verterem lucilius? Est ei esse tollit senserit. Sit diam clita ea, ne consul conclusionemque vituperatoribus vim, no laoreet docendi qui.</p>\r\n\r\n<p>Eu pro lorem discere inciderint. Mediocrem deseruisse sit no, ut sit harum affert debitis. Accusam abhorreant rationibus eam ei! Ipsum singulis an qui, ea mel persius consetetur! Cum in etiam senserit similique! Movet platonem ad eum, an his purto tation signiferumque.</p>\r\n\r\n<p>Pri suas essent constituto ea, pri clita putent percipit no. Per ei stet theophrastus. Sit in causae audire disputationi, quot bonorum ne has. Quaeque discere ut vis, mutat liber malorum eu mel. Ut nec oratio iuvaret.</p>\r\n\r\n<p>Nec cu discere volutpat, usu cu cetero reprehendunt. His nostro malorum contentiones ut, purto dolorum albucius sit an. Labitur sanctus fabulas ad sed. Sit eirmod epicuri te, duo laudem labore interpretaris ne.</p>\r\n\r\n<p>Pro no quaeque tibique tincidunt, ut appetere tractatos eam? His ex sint sonet primis, conceptam repudiandae mei id. Eu nisl etiam liber sit, mea doming eloquentiam ad. Id has impedit mediocrem. Reque docendi cum cu.</p>\r\n\r\n<p>Prima mandamus nam ei. Et doctus tibique scripserit vix, ei nec legere eripuit, ut vel doctus commodo! Ne noluisse cotidieque sed. Ferri vocibus id pri, te eam virtute aliquando! An doctus fastidii indoctum mei, ullum causae dignissim vim et! Tation copiosae luptatum ne pro. Et cibo integre eos?</p>\r\n\r\n<p>Facilis cotidieque ad eum, alterum reprehendunt ea eam.</p>\r\n\r\n<p>dsfsdf ddsf dsf df da sad sad f dsf sdf dsf dsf dsf asd</p>\r\n\r\n<p><img alt="This is some alternative text" longdesc="" src="/media/uploads/2018/11/07/400x300.png" style="height:300px; width:400px" />sdfds sdf sd ffads fs Some hsdfds sdmfksdfiwe ndsnf kjnfufsdjn&nbsp; jnjfnskjd nfsj nkf</p>\r\n\r\n<p>cds,flsdfk kjiiwiew jj kjksfj kfj kds kfks kl kj kj k jk jk kkkkk llll ll ;;; sdf dsf sdf</p>\r\n\r\n<p>fdsf</p>\r\n\r\n<p>dsf</p>\r\n\r\n<p>sdfsd</p>', datetime.datetime(2018, 10, 24, 8, 18, 48, tzinfo=<UTC>), 'banners/2018/11/13/935x200-2.png', 'banners_small/2018/10/28/250x80_oHxmf1D.png', 2)
+(0.001) INSERT INTO "django_admin_log" ("action_time", "user_id", "content_type_id", "object_id", "object_repr", "action_flag", "change_message") VALUES ('2018-11-14T08:37:55.765509+00:00'::timestamptz, 1, 7, '2', 'Another article', 2, '[{"changed": {"fields": ["body", "tags"]}}]') RETURNING "django_admin_log"."id"; args=(datetime.datetime(2018, 11, 14, 8, 37, 55, 765509, tzinfo=<UTC>), 1, 7, '2', 'Another article', 2, '[{"changed": {"fields": ["body", "tags"]}}]')
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:37:55.795360+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 37, 55, 795360, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=()
+(0.000) SELECT COUNT(*) AS "__count" FROM "blog_article"; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."id" DESC; args=()
+Exception while resolving variable 'errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errors] in None
+Exception while resolving variable 'show' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.5/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'show'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [show] in [{'None': None, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe5e4c688c8>>, 'False': False, 'True': True}]
+Exception while resolving variable 'is_multipart' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_multipart'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_multipart] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+Exception while resolving variable 'non_field_errors' in template 'admin/change_list.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'NoneType' object has no attribute 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'non_field_errors'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [non_field_errors] in None
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2018-11-14T08:37:55.881472+00:00'::timestamptz AND "django_session"."session_key" = 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk'); args=(datetime.datetime(2018, 11, 14, 8, 37, 55, 881472, tzinfo=<UTC>), 'gjz31sm6zu3td1u8wf5smtg8uhk3r5rk')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.003) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.000) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.002) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1; args=()
+(0.001) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" INNER JOIN "blog_article_tags" ON ("blog_tagulous_article_tags"."id" = "blog_article_tags"."tagulous_article_tags_id") WHERE "blog_article_tags"."article_id" = 3 ORDER BY "blog_tagulous_article_tags"."name" ASC; args=(3,)
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 10; args=()
+(0.000) SELECT "blog_tagulous_article_tags"."id", "blog_tagulous_article_tags"."name", "blog_tagulous_article_tags"."slug", "blog_tagulous_article_tags"."count", "blog_tagulous_article_tags"."protected" FROM "blog_tagulous_article_tags" ORDER BY "blog_tagulous_article_tags"."name" ASC; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()
+(0.001) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 2; args=()
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 3; args=()
+Not Found: /fetchArticlesOffset/3/
+Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.5/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'None': None, 'False': False, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fe5e4c5a978>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe5e4c757b8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fe5e4c5a208>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/blog/article/'>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fe5e4bed320>}, {}, {'site_header': 'Django administration', 'has_permission': False, 'site_url': '/', 'site_name': 'tuffingadmin.localhost', 'next': '/admin/blog/article/', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'app_path': '/admin/login/?next=/admin/blog/article/', 'available_apps': [], 'view': <django.contrib.auth.views.LoginView object at 0x7fe5e4c5ac50>, 'LANGUAGE_BIDI': False, 'site_title': 'Django site admin', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fe5e4c5e518>, 'title': 'Log in', 'username': '', 'LANGUAGE_CODE': 'en-us'}]
+Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.5/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in [{'None': None, 'False': False, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fe5e4c5a978>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fe5e4c757b8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fe5e4c5a208>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/blog/article/'>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fe5e4bed320>}, {}, {'site_header': 'Django administration', 'has_permission': False, 'site_url': '/', 'site_name': 'tuffingadmin.localhost', 'next': '/admin/blog/article/', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'app_path': '/admin/login/?next=/admin/blog/article/', 'available_apps': [], 'view': <django.contrib.auth.views.LoginView object at 0x7fe5e4c5ac50>, 'LANGUAGE_BIDI': False, 'site_title': 'Django site admin', 'site': <django.contrib.sites.requests.RequestSite object at 0x7fe5e4c5e518>, 'title': 'Log in', 'username': '', 'LANGUAGE_CODE': 'en-us'}]
+(0.002) SELECT "blog_article"."id", "blog_article"."headline", "blog_article"."machine_name", "blog_article"."author", "blog_article"."teaser", "blog_article"."body", "blog_article"."pub_date", "blog_article"."header_image", "blog_article"."header_image_small" FROM "blog_article" ORDER BY "blog_article"."pub_date" DESC  LIMIT 1 OFFSET 1; args=()

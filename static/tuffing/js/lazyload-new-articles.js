@@ -1,3 +1,10 @@
+/*
+@TODO
+- page reload - load to the right place
+- more than one lazy load
+
+*/
+
 //lazy load in the next article when the user is near the end
 
 //Ths share link is thee bottom of the article so wen that comes into view it is thoeritcally the best time to load it
@@ -31,9 +38,12 @@ var fetchNextArticle = function() {
         wrapper.className = 'article-post';
         wrapper.innerHTML = data;
         document.querySelector('.left-col:first-child').append(wrapper);
+
+        triggered = false;
+        newestLoaded = wrapper.querySelector('.share-post:last-child');
     })
     .catch(function(error) {
-        console.log(`Error: ${error.message}`);
+        console.log(`Error: ${error.message}, likely more articles`);
     });
     
 }
