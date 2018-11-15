@@ -1,0 +1,32 @@
+
+<header>
+	<a class="title" href="{% url 'blog:article' article.machine_name %}">
+		<div class="image">
+			{% load static %}
+			<img src="{{ article.header_image.url }}" alt="{{ article.headline }}}"></img>
+		</div>
+		<h1>{{ article.headline }}</h1>
+	</a>
+	<div class="by-line">
+		Written By
+		<span class="author">{{ article.author }}</span>
+		on
+		<span class="date">{{ article.pub_date }}</span> 
+	</div>
+</header>
+
+<div class="content">
+	{{ article.body | safe }}
+</div>
+
+<div class="share-post">
+
+	<h3>Share:</h3> 
+	<ul>
+		<li class="pill"><a href"/">Facebook</a></li>
+		<li class="pill"><a href"/">Twitter</a></li>
+		<li class="pill"><a href"/">LinkedIn</a></li>
+	</ul>
+
+</div>
+
