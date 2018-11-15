@@ -18,6 +18,9 @@ class Article(models.Model):
     def __str__(self):
         return self.headline
 
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse('blog:article', args=[str(self.machine_name)])
 
 class AltHeadlines(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE)

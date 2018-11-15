@@ -28,7 +28,7 @@
 			<h3>Share:</h3> 
 			<ul>
 				<li class="pill"><a href"/">Facebook</a></li>
-				<li class="pill"><a href"/">Twitter</a></li>
+				<li class="pill"><a href="https://twitter.com/intent/tweet?text={{ article.headline | urlencode }} {{ request.build_absolute_uri | urlencode}}{{ article.get_absolute_url | slice:"1:" | urlencode}} via @ATuffingBlog" target="_blank">Twitter</a></li>
 				<li class="pill"><a href"/">LinkedIn</a></li>
 			</ul>
 
