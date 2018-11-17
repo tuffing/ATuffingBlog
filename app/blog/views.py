@@ -21,9 +21,12 @@ def index(request):
     return render(request, 'blog/article.html', context)
 
 
-def fetchArticles(request, offset):
+def fetchArticles(request, offset, exclude_article=None):
     try:
-        context = {'article': Article.objects.order_by('-pub_date')[offset:offset + 1].get()}
+        if exclude_article:
+            context = {'article': Article.objects.exclude(machine_name=exclude_article).order_by('-pub_date')[offset:offset + 1].get()}
+        else: #.exclude(pub_date__gt=datetime.date(2005, 1, 3), headline='Hello')
+            context = {'article': Article.objects.order_by('-pub_date')[offset:offset + 1].get()}
     except ObjectDoesNotExist:
         raise Http404
 
